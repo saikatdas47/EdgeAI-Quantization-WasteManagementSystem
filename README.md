@@ -24,7 +24,7 @@ The main goal is to study the interaction between **network architecture** and *
 > Replace the placeholder below with your final system or workflow figure.
 
 <p align="center">
-<img width="1764" height="1880" alt="quantization" src="https://github.com/user-attachments/assets/0db4b37b-0ada-44cf-b2bc-ea6cee0faf1f" />
+<img width="250" height="" alt="quantization" src="https://github.com/user-attachments/assets/0db4b37b-0ada-44cf-b2bc-ea6cee0faf1f" />
 </p>
 
 **Suggested figure:** training-to-deployment pipeline or complete benchmarking workflow.
