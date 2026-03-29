@@ -1,0 +1,23 @@
+{
+  "tf_version": "2.14.0",
+  "img_size": [
+    224,
+    224
+  ],
+  "batch_size": 32,
+  "rep_batches": 15,
+  "seed": 42,
+  "classes": [
+    "Biological",
+    "Metal",
+    "Paper",
+    "Plastic"
+  ],
+  "outputs": {
+    "fp32": "fp32.tflite",
+    "fp16": "fp16.tflite",
+    "drq": "drq.tflite",
+    "int8_hybrid_floatio": "int8_hybrid_floatio.tflite",
+    "int8_full_uint8io": "int8_full_uint8io.tflite"
+  }
+}

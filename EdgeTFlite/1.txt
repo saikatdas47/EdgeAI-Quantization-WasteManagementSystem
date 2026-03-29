@@ -1,0 +1,34 @@
+✅ থিসিসে এক লাইনে “final” recommendation table
+	•	InceptionV3 → minus1_1
+	•	MobileNetV1 → minus1_1
+	•	MobileNetV3Small → raw_255
+	•	NASNetMobile → minus1_1
+	•	ResNet50 → raw_255 
+	•	EfficientNetB0 → raw_255
+
+
+
+নিচেরটা একটা “one script”—যেটা দিয়ে তুমি যেকোনো model family (efficientnetb0 / mobilenetv1 / mobilenetv3small / nasnetmobile / resnet50 / inceptionv3) এর জন্য:
+	•	FP32
+	•	FP16
+	•	DRQ (dynamic range quant)
+	•	FULL INT8 (int8 IO + int8 ops)
+
+export করতে পারবে।
+
+এখানে সবচেয়ে গুরুত্বপূর্ণ জিনিস: Representative dataset (calibration) preprocessing = training/serving preprocessing। এটা mismatch হলে তোমার accuracy 0.25 এর মত হয়ে যাবে (তোমার log-এ যেমন দেখা যাচ্ছে)।
+
+TF Lite quantization guideline অনুযায়ী representative dataset অবশ্যই float32 yield করবে।  ￼
+Full integer quantization এ TFLITE_BUILTINS_INT8 + inference_input_type=int8 + inference_output_type=int8 লাগবে।  ￼
+FP16 conversion এ সাধারণত Optimize.DEFAULT + supported_types=[tf.float16] ব্যবহার করা হয়।  ￼
+
+আর preprocessing “কোন family কোন range নেয়”—এটা তোমার training pipeline / SavedModel-এর ভিতরে preprocessing আছে কি না তার উপর depend করে। Keras docs-এ InceptionV3 এর preprocess_input [-1,1] স্কেলে বলে।  ￼
+তাই আমি script-এ AUTO + override দিলাম, যাতে clash না হয়।
+
+
+# Representative dataset normalization:
+# - "auto"     => family-based default (recommended)
+# - "raw_255"  => float32, range [0..255]
+# - "0_1"      => float32, range [0..1]
+# - "minus1_1" => float32, range [-1..1]
+# - "resnet_caffe" => float32, RGB->BGR + mean subtraction (ResNet50 classic)

@@ -1,0 +1,378 @@
+{
+  "fp32": {
+    "model": "fp32.tflite",
+    "file_size_mb": 83.16244125366211,
+    "file_sha1": "3756f4c6780f3f9b1d64d4984c701bfdff5aaf93",
+    "tflite_runtime_version": "unknown",
+    "tensorflow_version": "not_installed",
+    "backend_used": "tflite_runtime",
+    "dataset": {
+      "path": "data_mixed",
+      "num_images": 378,
+      "classes": [
+        "Biological",
+        "Metal",
+        "Paper",
+        "Plastic"
+      ],
+      "class_order_source": "classes.json"
+    },
+    "settings": {
+      "warmup_runs": 30,
+      "bench_runs": 300,
+      "load_reps": 5,
+      "sample_every": 10,
+      "num_threads": 4,
+      "float_preprocess_mode": "minus1_1",
+      "seed": 42
+    },
+    "load_time_mean_s": 0.05919833079988166,
+    "load_time_std_s": 0.11354195444408408,
+    "infer_ms_mean": 958.8249421166742,
+    "infer_ms_std": 21.6048366167192,
+    "infer_ms_p50": 954.348109500188,
+    "infer_ms_p95": 1002.1413129994016,
+    "throughput_img_s": 1.0429432486314227,
+    "cpu_mean": 289.56333333333333,
+    "cpu_peak": 294.9,
+    "ram_mean_mb": 261.764453125,
+    "ram_peak_mb": 261.76953125,
+    "temp_start_c": 63.296,
+    "temp_mean_c": 83.3604,
+    "temp_peak_c": 84.237,
+    "accuracy": 0.873015873015873,
+    "macro_f1": 0.8689652735692629,
+    "per_class_report": {
+      "Biological": {
+        "precision": 0.9803921568627451,
+        "recall": 0.9900990099009901,
+        "f1-score": 0.9852216748768473,
+        "support": 101.0
+      },
+      "Metal": {
+        "precision": 0.8426966292134831,
+        "recall": 0.7894736842105263,
+        "f1-score": 0.8152173913043478,
+        "support": 95.0
+      },
+      "Paper": {
+        "precision": 0.7962962962962963,
+        "recall": 0.9662921348314607,
+        "f1-score": 0.8730964467005076,
+        "support": 89.0
+      },
+      "Plastic": {
+        "precision": 0.8734177215189873,
+        "recall": 0.7419354838709677,
+        "f1-score": 0.8023255813953488,
+        "support": 93.0
+      },
+      "accuracy": 0.873015873015873,
+      "macro avg": {
+        "precision": 0.8732007009728779,
+        "recall": 0.8719500782034861,
+        "f1-score": 0.8689652735692629,
+        "support": 378.0
+      },
+      "weighted avg": {
+        "precision": 0.876121709232948,
+        "recall": 0.873015873015873,
+        "f1-score": 0.8710976300597545,
+        "support": 378.0
+      }
+    },
+    "input_shape": [
+      1,
+      299,
+      299,
+      3
+    ],
+    "input_dtype": "<class 'numpy.float32'>",
+    "input_quant": {
+      "scale": 0.0,
+      "zero_point": 0
+    }
+  },
+  "fp16": {
+    "model": "fp16.tflite",
+    "file_size_mb": 41.67658615112305,
+    "file_sha1": "65764ccbc6cb7ff2be2a795fc8060791504568df",
+    "tflite_runtime_version": "unknown",
+    "tensorflow_version": "not_installed",
+    "backend_used": "tflite_runtime",
+    "dataset": {
+      "path": "data_mixed",
+      "num_images": 378,
+      "classes": [
+        "Biological",
+        "Metal",
+        "Paper",
+        "Plastic"
+      ],
+      "class_order_source": "classes.json"
+    },
+    "settings": {
+      "warmup_runs": 30,
+      "bench_runs": 300,
+      "load_reps": 5,
+      "sample_every": 10,
+      "num_threads": 4,
+      "float_preprocess_mode": "minus1_1",
+      "seed": 42
+    },
+    "load_time_mean_s": 0.05806409079996229,
+    "load_time_std_s": 0.10865936037156002,
+    "infer_ms_mean": 953.6997889566949,
+    "infer_ms_std": 19.844254737405624,
+    "infer_ms_p50": 949.5917049998752,
+    "infer_ms_p95": 998.3914160500262,
+    "throughput_img_s": 1.048547993382651,
+    "cpu_mean": 290.5833333333333,
+    "cpu_peak": 300.6,
+    "ram_mean_mb": 303.93359375,
+    "ram_peak_mb": 303.93359375,
+    "temp_start_c": 81.802,
+    "temp_mean_c": 83.52273333333333,
+    "temp_peak_c": 84.724,
+    "accuracy": 0.873015873015873,
+    "macro_f1": 0.8689652735692629,
+    "per_class_report": {
+      "Biological": {
+        "precision": 0.9803921568627451,
+        "recall": 0.9900990099009901,
+        "f1-score": 0.9852216748768473,
+        "support": 101.0
+      },
+      "Metal": {
+        "precision": 0.8426966292134831,
+        "recall": 0.7894736842105263,
+        "f1-score": 0.8152173913043478,
+        "support": 95.0
+      },
+      "Paper": {
+        "precision": 0.7962962962962963,
+        "recall": 0.9662921348314607,
+        "f1-score": 0.8730964467005076,
+        "support": 89.0
+      },
+      "Plastic": {
+        "precision": 0.8734177215189873,
+        "recall": 0.7419354838709677,
+        "f1-score": 0.8023255813953488,
+        "support": 93.0
+      },
+      "accuracy": 0.873015873015873,
+      "macro avg": {
+        "precision": 0.8732007009728779,
+        "recall": 0.8719500782034861,
+        "f1-score": 0.8689652735692629,
+        "support": 378.0
+      },
+      "weighted avg": {
+        "precision": 0.876121709232948,
+        "recall": 0.873015873015873,
+        "f1-score": 0.8710976300597545,
+        "support": 378.0
+      }
+    },
+    "input_shape": [
+      1,
+      299,
+      299,
+      3
+    ],
+    "input_dtype": "<class 'numpy.float32'>",
+    "input_quant": {
+      "scale": 0.0,
+      "zero_point": 0
+    }
+  },
+  "drq": {
+    "model": "drq.tflite",
+    "file_size_mb": 21.1094970703125,
+    "file_sha1": "d7fd33f44a1d23f4cb5644a3b46da1c5b3c8e1ea",
+    "tflite_runtime_version": "unknown",
+    "tensorflow_version": "not_installed",
+    "backend_used": "tflite_runtime",
+    "dataset": {
+      "path": "data_mixed",
+      "num_images": 378,
+      "classes": [
+        "Biological",
+        "Metal",
+        "Paper",
+        "Plastic"
+      ],
+      "class_order_source": "classes.json"
+    },
+    "settings": {
+      "warmup_runs": 30,
+      "bench_runs": 300,
+      "load_reps": 5,
+      "sample_every": 10,
+      "num_threads": 4,
+      "float_preprocess_mode": "minus1_1",
+      "seed": 42
+    },
+    "load_time_mean_s": 0.054564476599807676,
+    "load_time_std_s": 0.10157258819230107,
+    "infer_ms_mean": 455.6207840233007,
+    "infer_ms_std": 30.758061448137795,
+    "infer_ms_p50": 451.83178299976134,
+    "infer_ms_p95": 462.4595427501845,
+    "throughput_img_s": 2.194807688906614,
+    "cpu_mean": 315.56999999999994,
+    "cpu_peak": 326.6,
+    "ram_mean_mb": 134.90234375,
+    "ram_peak_mb": 134.90234375,
+    "temp_start_c": 81.315,
+    "temp_mean_c": 83.40910000000001,
+    "temp_peak_c": 84.237,
+    "accuracy": 0.8703703703703703,
+    "macro_f1": 0.8660702951286066,
+    "per_class_report": {
+      "Biological": {
+        "precision": 0.9803921568627451,
+        "recall": 0.9900990099009901,
+        "f1-score": 0.9852216748768473,
+        "support": 101.0
+      },
+      "Metal": {
+        "precision": 0.8333333333333334,
+        "recall": 0.7894736842105263,
+        "f1-score": 0.8108108108108109,
+        "support": 95.0
+      },
+      "Paper": {
+        "precision": 0.8037383177570093,
+        "recall": 0.9662921348314607,
+        "f1-score": 0.8775510204081632,
+        "support": 89.0
+      },
+      "Plastic": {
+        "precision": 0.8607594936708861,
+        "recall": 0.7311827956989247,
+        "f1-score": 0.7906976744186046,
+        "support": 93.0
+      },
+      "accuracy": 0.8703703703703703,
+      "macro avg": {
+        "precision": 0.8695558254059935,
+        "recall": 0.8692619061604754,
+        "f1-score": 0.8660702951286066,
+        "support": 378.0
+      },
+      "weighted avg": {
+        "precision": 0.8724063960358999,
+        "recall": 0.8703703703703703,
+        "f1-score": 0.8681781500710195,
+        "support": 378.0
+      }
+    },
+    "input_shape": [
+      1,
+      299,
+      299,
+      3
+    ],
+    "input_dtype": "<class 'numpy.float32'>",
+    "input_quant": {
+      "scale": 0.0,
+      "zero_point": 0
+    }
+  },
+  "int8_full_int8io": {
+    "model": "int8_full_int8io.tflite",
+    "file_size_mb": 21.31047821044922,
+    "file_sha1": "9712f91542918415e8b1c01db5b8ba62bedc5bc1",
+    "tflite_runtime_version": "unknown",
+    "tensorflow_version": "not_installed",
+    "backend_used": "tflite_runtime",
+    "dataset": {
+      "path": "data_mixed",
+      "num_images": 378,
+      "classes": [
+        "Biological",
+        "Metal",
+        "Paper",
+        "Plastic"
+      ],
+      "class_order_source": "classes.json"
+    },
+    "settings": {
+      "warmup_runs": 30,
+      "bench_runs": 300,
+      "load_reps": 5,
+      "sample_every": 10,
+      "num_threads": 4,
+      "float_preprocess_mode": "minus1_1",
+      "seed": 42
+    },
+    "load_time_mean_s": 0.05651118540008611,
+    "load_time_std_s": 0.10418553835894488,
+    "infer_ms_mean": 358.9321816733567,
+    "infer_ms_std": 6.895632486655568,
+    "infer_ms_p50": 358.6069579996547,
+    "infer_ms_p95": 367.5539445997856,
+    "throughput_img_s": 2.786041628638476,
+    "cpu_mean": 317.2933333333333,
+    "cpu_peak": 330.29999999999995,
+    "ram_mean_mb": 117.20611979166667,
+    "ram_peak_mb": 117.5078125,
+    "temp_start_c": 81.315,
+    "temp_mean_c": 83.4091,
+    "temp_peak_c": 85.211,
+    "accuracy": 0.8624338624338624,
+    "macro_f1": 0.8579103797948555,
+    "per_class_report": {
+      "Biological": {
+        "precision": 0.9803921568627451,
+        "recall": 0.9900990099009901,
+        "f1-score": 0.9852216748768473,
+        "support": 101.0
+      },
+      "Metal": {
+        "precision": 0.8172043010752689,
+        "recall": 0.8,
+        "f1-score": 0.8085106382978723,
+        "support": 95.0
+      },
+      "Paper": {
+        "precision": 0.8,
+        "recall": 0.9438202247191011,
+        "f1-score": 0.865979381443299,
+        "support": 89.0
+      },
+      "Plastic": {
+        "precision": 0.8461538461538461,
+        "recall": 0.7096774193548387,
+        "f1-score": 0.7719298245614035,
+        "support": 93.0
+      },
+      "accuracy": 0.8624338624338624,
+      "macro avg": {
+        "precision": 0.8609375760229651,
+        "recall": 0.8608991634937324,
+        "f1-score": 0.8579103797948555,
+        "support": 378.0
+      },
+      "weighted avg": {
+        "precision": 0.8638791643851732,
+        "recall": 0.8624338624338624,
+        "f1-score": 0.8602580381839247,
+        "support": 378.0
+      }
+    },
+    "input_shape": [
+      1,
+      299,
+      299,
+      3
+    ],
+    "input_dtype": "<class 'numpy.int8'>",
+    "input_quant": {
+      "scale": 0.007843137718737125,
+      "zero_point": -1
+    }
+  }
+}

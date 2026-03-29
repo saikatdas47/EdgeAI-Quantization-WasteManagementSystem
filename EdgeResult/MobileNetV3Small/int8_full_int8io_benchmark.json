@@ -1,0 +1,94 @@
+{
+  "model": "int8_full_int8io.tflite",
+  "file_size_mb": 1.1807327270507812,
+  "file_sha1": "44bb80acdbc84b198bd5e4476b621ad74bc024ad",
+  "tflite_runtime_version": "unknown",
+  "tensorflow_version": "not_installed",
+  "backend_used": "tflite_runtime",
+  "dataset": {
+    "path": "data_mixed",
+    "num_images": 378,
+    "classes": [
+      "Biological",
+      "Metal",
+      "Paper",
+      "Plastic"
+    ],
+    "class_order_source": "classes.json"
+  },
+  "settings": {
+    "warmup_runs": 30,
+    "bench_runs": 300,
+    "load_reps": 5,
+    "sample_every": 10,
+    "num_threads": 4,
+    "float_preprocess_mode": "raw_255",
+    "seed": 42
+  },
+  "load_time_mean_s": 0.00955657060003432,
+  "load_time_std_s": 0.014011969326449145,
+  "infer_ms_mean": 14.868330050001836,
+  "infer_ms_std": 0.05448284630553707,
+  "infer_ms_p50": 14.860541999951238,
+  "infer_ms_p95": 14.956137949957338,
+  "throughput_img_s": 67.25704881698375,
+  "cpu_mean": 176.21999999999997,
+  "cpu_peak": 223.60000000000002,
+  "ram_mean_mb": 88.8140625,
+  "ram_peak_mb": 88.85546875,
+  "temp_start_c": 71.575,
+  "temp_mean_c": 71.65616666666666,
+  "temp_peak_c": 72.549,
+  "accuracy": 0.7619047619047619,
+  "macro_f1": 0.757819138856843,
+  "per_class_report": {
+    "Biological": {
+      "precision": 0.883495145631068,
+      "recall": 0.900990099009901,
+      "f1-score": 0.8921568627450981,
+      "support": 101.0
+    },
+    "Metal": {
+      "precision": 0.6727272727272727,
+      "recall": 0.7789473684210526,
+      "f1-score": 0.7219512195121951,
+      "support": 95.0
+    },
+    "Paper": {
+      "precision": 0.6767676767676768,
+      "recall": 0.7528089887640449,
+      "f1-score": 0.7127659574468085,
+      "support": 89.0
+    },
+    "Plastic": {
+      "precision": 0.8484848484848485,
+      "recall": 0.6021505376344086,
+      "f1-score": 0.7044025157232704,
+      "support": 93.0
+    },
+    "accuracy": 0.7619047619047619,
+    "macro avg": {
+      "precision": 0.7703687359027166,
+      "recall": 0.7587242484573518,
+      "f1-score": 0.757819138856843,
+      "support": 378.0
+    },
+    "weighted avg": {
+      "precision": 0.7732368115323887,
+      "recall": 0.7619047619047619,
+      "f1-score": 0.7609492411797448,
+      "support": 378.0
+    }
+  },
+  "input_shape": [
+    1,
+    224,
+    224,
+    3
+  ],
+  "input_dtype": "<class 'numpy.int8'>",
+  "input_quant": {
+    "scale": 1.0,
+    "zero_point": -128
+  }
+}

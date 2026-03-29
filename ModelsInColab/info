@@ -1,0 +1,115 @@
+System:
+  Kernel: 6.12.47+rpt-rpi-v8 arch: aarch64 bits: 64 compiler: gcc v: 14.2.0
+    clocksource: arch_sys_counter parameters: coherent_pool=1M 8250.nr_uarts=1
+    snd_bcm2835.enable_headphones=0 cgroup_disable=memory
+    numa_policy=interleave nvme.max_host_mem_size_mb=0
+    snd_bcm2835.enable_headphones=1 snd_bcm2835.enable_hdmi=1
+    snd_bcm2835.enable_hdmi=0 numa=fake=2 system_heap.max_order=0
+    smsc95xx.macaddr=D8:3A:DD:B5:DC:54 vc_mem.mem_base=0x3ec00000
+    vc_mem.mem_size=0x40000000 console=ttyS0,115200 console=tty1
+    root=PARTUUID=80ad14b5-02 rootfstype=ext4 fsck.repair=yes rootwait quiet
+    splash plymouth.ignore-serial-consoles cfg80211.ieee80211_regdom=BD
+  Desktop: LabWC v: N/A tools: avail: swayidle,swaylock vt: 7 dm: LightDM
+    v: 1.32.0 Distro: Debian GNU/Linux 13 (trixie)
+Machine:
+  Type: ARM System: Raspberry Pi 4 Model B Rev 1.5 details: N/A rev: d03115
+    serial: <filter>
+CPU:
+  Info: model: N/A variant: cortex-a72 bits: 64 type: MCP arch: ARMv8
+    family: 8 model-id: 0 stepping: 3
+  Topology: cpus: 1x clusters: 1 cores: 4 smt: <unsupported> cache:
+    L1: 320 KiB desc: d-4x32 KiB; i-4x48 KiB L2: 1024 KiB desc: 1x1024 KiB
+  Speed (MHz): avg: 1800 min/max: 600/1800 scaling: driver: cpufreq-dt
+    governor: ondemand cores: 1: 1800 2: 1800 3: 1800 4: 1800 bogomips: 432
+  Features: Use -f option to see features
+  Vulnerabilities:
+  Type: gather_data_sampling status: Not affected
+  Type: indirect_target_selection status: Not affected
+  Type: itlb_multihit status: Not affected
+  Type: l1tf status: Not affected
+  Type: mds status: Not affected
+  Type: meltdown status: Not affected
+  Type: mmio_stale_data status: Not affected
+  Type: reg_file_data_sampling status: Not affected
+  Type: retbleed status: Not affected
+  Type: spec_rstack_overflow status: Not affected
+  Type: spec_store_bypass status: Vulnerable
+  Type: spectre_v1 mitigation: __user pointer sanitization
+  Type: spectre_v2 status: Vulnerable
+  Type: srbds status: Not affected
+  Type: tsa status: Not affected
+  Type: tsx_async_abort status: Not affected
+  Type: vmscape status: Not affected
+Graphics:
+  Device-1: bcm2711-hdmi0 driver: vc4_hdmi v: N/A bus-ID: N/A
+    chip-ID: brcm:fef00700 class-ID: hdmi
+  Device-2: bcm2711-hdmi1 driver: vc4_hdmi v: N/A bus-ID: N/A
+    chip-ID: brcm:fef05700 class-ID: hdmi
+  Device-3: bcm2711-vc5 driver: vc4_drm v: N/A bus-ID: N/A chip-ID: brcm:gpu
+    class-ID: gpu
+  Display: wayland server: X.org v: 1.21.1.16 with: Xwayland v: 24.1.6
+    compositor: LabWC driver: N/A display-ID: 0
+  Monitor-1: NOOP-1 size-res: N/A modes: N/A
+  API: EGL v: 1.5 hw: drv: broadcom v3d drv: broadcom vc4 platforms:
+    device: 0 drv: v3d device: 1 drv: swrast gbm: drv: v3d surfaceless: drv: v3d
+    wayland: drv: vc4 x11: drv: vc4
+  API: OpenGL v: 4.5 compat-v: 3.1 vendor: broadcom mesa v: 25.0.7-2+rpt3
+    glx-v: 1.4 direct-render: yes renderer: V3D 4.2.14.0
+    device-ID: 14e4:ffffffff memory: 7.46 GiB unified: yes display-ID: :0.0
+  API: Vulkan v: 1.4.309 layers: 2 device: 0 type: integrated-gpu
+    name: V3D 4.2.14.0 driver: mesa v3dv v: 25.0.7-2+rpt3
+    device-ID: 14e4:be485fd3 surfaces: xcb,xlib,wayland device: 1 type: cpu
+    name: llvmpipe (LLVM 19.1.7 128 bits) driver: mesa llvmpipe
+    v: 25.0.7-2+rpt3 (LLVM 19.1.7) device-ID: 10005:0000
+    surfaces: xcb,xlib,wayland
+  Info: Tools: api: eglinfo, glxinfo, vulkaninfo wl: kanshi,wlr-randr
+    x11: xdriinfo, xdpyinfo, xprop, xrandr
+Audio:
+  Device-1: bcm2711-hdmi0 driver: vc4_hdmi bus-ID: N/A chip-ID: brcm:fef00700
+    class-ID: hdmi
+  Device-2: bcm2711-hdmi1 driver: vc4_hdmi bus-ID: N/A
+    chip-ID: brcm:fef05700 class-ID: hdmi
+  API: ALSA v: k6.12.47+rpt-rpi-v8 status: kernel-api
+    tools: alsactl,alsamixer,amixer
+  Server-1: PipeWire v: 1.4.2 status: active with: 1: pipewire-pulse
+    status: active 2: wireplumber status: active tools: pw-cat,pw-cli,wpctl
+Network:
+  Device-1: bcm2835-mmc driver: mmc_bcm2835 v: N/A port: N/A bus-ID: N/A
+    chip-ID: brcm:fe300000 class-ID: mmcnr
+  IF: wlan0 state: up mac: <filter>
+  Device-2: bcm2711-genet-v5 driver: bcmgenet v: N/A port: N/A bus-ID: N/A
+    chip-ID: brcm:fd580000 class-ID: ethernet
+  IF: eth0 state: down mac: <filter>
+  Info: services: NetworkManager, sshd, systemd-timesyncd, wpa_supplicant
+Bluetooth:
+  Device-1: pl011 driver: uart_pl011 bus-ID: N/A chip-ID: arm:fe201000
+    class-ID: serial
+  Report: hciconfig ID: hci0 rfk-id: 0 state: down
+    bt-service: enabled,running rfk-block: hardware: no software: yes
+    address: <filter>
+  Info: acl-mtu: 1021:8 sco-mtu: 64:1 link-policy: rswitch sniff
+    link-mode: peripheral accept
+  Device-2: pl011 driver: ctrl bus-ID: N/A chip-ID: arm:gpiochip0
+    class-ID: serial
+Drives:
+  Local Storage: total: 29.12 GiB used: 6.79 GiB (23.3%)
+  SMART Message: Required tool smartctl not installed. Check --recommends
+  ID-1: /dev/mmcblk0 maj-min: 179:0 model: USD size: 29.12 GiB block-size:
+    physical: 512 B logical: 512 B type: Removable tech: SSD serial: <filter>
+    scheme: MBR
+Partition:
+  ID-1: / raw-size: 28.61 GiB size: 28.09 GiB (98.16%) used: 6.7 GiB (23.9%)
+    fs: ext4 dev: /dev/mmcblk0p2 maj-min: 179:2
+Swap:
+  Kernel: swappiness: 60 (default) cache-pressure: 100 (default) zswap: no
+  ID-1: swap-1 type: zram size: 2 GiB used: 0 KiB (0.0%) priority: 100
+    comp: zstd avail: lzo-rle,lzo,lz4 max-streams: 4 dev: /dev/zram0
+Sensors:
+  System Temperatures: cpu: 46.3 C mobo: N/A
+  Fan Speeds (rpm): N/A
+Info:
+  Memory: total: N/A available: 7.64 GiB used: 703.1 MiB (9.0%) igpu: 76 MiB
+  Processes: 228 Power: uptime: 4m suspend: Init: systemd v: 257
+    default: graphical tool: systemctl
+  Packages: pm: dpkg pkgs: 1664 libs: 887 tools: apt,apt-get Compilers:
+    gcc: 14.2.0 Shell: Bash v: 5.2.37 running-in: x-terminal-emul inxi: 3.3.38

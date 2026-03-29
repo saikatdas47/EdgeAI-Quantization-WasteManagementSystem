@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Ignore trained model weights
+*.keras
+*.h5
+*.hdf5
+*.ckpt

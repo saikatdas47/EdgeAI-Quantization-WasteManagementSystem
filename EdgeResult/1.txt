@@ -1,0 +1,6 @@
+	•	InceptionV3 → minus1_1
+	•	MobileNetV1 → minus1_1
+	•	MobileNetV3Small → raw_255
+	•	NASNetMobile → minus1_1
+	•	ResNet50 → raw_255 
+	•	EfficientNetB0 → raw_255
