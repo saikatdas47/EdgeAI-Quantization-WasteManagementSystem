@@ -36,7 +36,7 @@ The main goal is to study the interaction between **network architecture** and *
 > Add your YouTube demo link below.
 
 **YouTube Demo:**  
-`[PASTE_YOUR_YOUTUBE_LINK_HERE](https://youtu.be/LS8pOz9uuPw?si=7KCP6rmZhyfTJJfQ)`
+https://youtu.be/LS8pOz9uuPw?si=qeKznMmPftzhh8Kl
 
 ---
 
