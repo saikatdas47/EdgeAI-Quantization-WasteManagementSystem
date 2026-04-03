@@ -4,7 +4,7 @@ This repository contains the implementation, trained models, TensorFlow Lite con
 
 The project systematically evaluates how different CNN architectures behave under multiple post-training quantization strategies when deployed on a Raspberry Pi 4B. In addition to predictive performance, the study considers deployment-critical system metrics such as throughput, load time, CPU usage, RAM usage, and temperature.
 
----
+
 
 ## Overview
 
@@ -16,14 +16,14 @@ High cloud-stage accuracy does not always translate into practical edge performa
 
 The main goal is to study the interaction between **network architecture** and **quantization strategy** under real hardware constraints.
 
----
+
 
 ## Overall Pipeline Figure
 
 > Replace the placeholder below with your final system or workflow figure.
 
 <p align="center">
-	<img width="250" height="" alt="quantization" src="https://github.com/user-attachments/assets/6bfe24fa-31a0-4811-9871-ab83fd0d53b9" />
+<img width="250" height="" alt="Screenshot 2026-04-04 at 3 25 31 AM" src="https://github.com/user-attachments/assets/7ea1c5a7-09a6-4ea2-a950-bce0da4adb60" />
 
 </p>
 
@@ -95,7 +95,7 @@ Plots/
 	•	Final figures used in paper
 	•	Visualization notebooks
 
-⸻
+
 
 Evaluated Models
 	•	EfficientNetB0
@@ -105,7 +105,7 @@ Evaluated Models
 	•	NASNetMobile
 	•	ResNet50
 
-⸻
+
 
 Quantization Variants
 	•	FP32
@@ -113,7 +113,7 @@ Quantization Variants
 	•	DRQ
 	•	INT8
 
-⸻
+
 
 Benchmarking Metrics
 
@@ -131,7 +131,7 @@ Deployment
 	•	Temperature
 	•	Model size
 
-⸻
+
 
 Edge Deployment Score (EDS)
 
@@ -148,7 +148,7 @@ Two variants:
 	•	Equal-weight
 	•	Weighted (deployment-aware)
 
-⸻
+
 
 Datasets
 
@@ -162,7 +162,7 @@ Edge Dataset
 DATASet_WasteClass
 https://github.com/saikatdas47/DATASet_WasteClass
 
-⸻
+
 
 Reproducibility
 
@@ -173,7 +173,7 @@ Steps:
 	4.	Run benchmarking (EdgeResult/)
 	5.	Generate plots (Plots/)
 
-⸻
+
 
 Example Commands
 python ModelsInColab/run_bench.py
@@ -186,7 +186,7 @@ Key Findings
 	•	Deep models degrade under edge constraints
 	•	Deployment requires hardware-aware evaluation
 
-⸻
+
 
 Hardware
 	•	Raspberry Pi 4B
@@ -194,7 +194,7 @@ Hardware
 	•	ARM Cortex-A72
 	•	CPU inference
 
-⸻
+
 
 Software
 	•	TensorFlow / Keras
